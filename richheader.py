@@ -40,10 +40,11 @@ class Info:
         self.build=compid&0xffff
         self.count=count
         
+ 
+if __name__  == "__main__":
+    fp1=open(sys.argv[1],'rb')
+    a1=richheader(fp1)
+    fp2=open(sys.argv[2],'rb')
+    a2=richheader(fp2)
 
-fp1=open(sys.argv[1],'rb')
-a1=richheader(fp1)
-fp2=open(sys.argv[2],'rb')
-a2=richheader(fp2)
-
-a1.prodid_similarity(a2)
+    a1.prodid_similarity(a2)
