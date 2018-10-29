@@ -28,9 +28,11 @@ class richheader:
         for i,j in zip(self.info,and_info.info):#make set
             set1.append(i.prodid)
             set2.append(j.prodid)
-        result=len(set(set1)&set(set2))#Intersection sets // 교집합시키기
-        print result
-        return result
+        result1=len(set(set1)&set(set2))#Intersection sets // 교집합시키기
+        result2=len(set(set1)|set(set2))
+        print(result1)
+        print(result2/result1)
+        return result1
 
 
 class Info:
